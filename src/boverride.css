@@ -1,0 +1,112 @@
+body{
+  color: var(--text-secondary)
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary)
+}
+
+.card-header {
+  color: var(--text-primary);
+  font-weight: bold;
+}
+
+.card-body {
+  color: var(--text-secondary);
+}
+
+.btn-primary{
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+}
+
+.btn-primary:hover{
+    background-color: var(--brand-primary-lighter);
+    border-color: var(--brand-primary-lighter);
+}
+
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: var(--brand-primary-lightest);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--brand-primary) 25%, transparent);;
+}
+
+.table-hover > tbody > tr:hover > * {
+  --bs-table-color-state: var(--text-primary);
+  --bs-table-bg-state: var(--background-tertiary);
+}
+
+.btn-danger{
+    background-color: var(--brand-danger-darker);
+    border-color: var(--brand-danger-darker);
+}
+
+.btn-danger:hover{
+    background-color: var(--brand-danger);
+    border-color: var(--brand-danger);
+}
+
+.btn-info{
+    background-color: var(--brand-info-darker);
+    border-color: var(--brand-info-darker);
+}
+
+.btn-info:hover{
+    background-color: var(--brand-info);
+    border-color: var(--brand-info);
+}
+
+.btn-warning{
+    background-color: var(--brand-warning-darker);
+    border-color: var(--brand-warning-darker);
+}
+
+.btn-warning:hover{
+    background-color: var(--brand-warning);
+    border-color: var(--brand-warning);
+}
+
+.btn-success{
+    background-color: var(--brand-success-darker);
+    border-color: var(--brand-success-darker);
+}
+
+.btn-success:hover{
+    background-color: var(--brand-success);
+    border-color: var(--brand-success);
+}
+
+.btn-link{
+    color: var(--link-color)
+}
+
+.btn-link:hover{
+    color: var(--link-hover-color)
+}
+
+a{
+    color: var(--link-color)
+}
+
+a:hover{
+    color: var(--link-hover-color)
+}
+
+.alert-success{
+  background-color: var(--state-success-bg);
+  border-color: var(--brand-success);
+}
+.alert-info{
+  background-color: var(--state-info-bg);
+  border-color: var(--brand-info);
+}
+.alert-warning{
+  background-color: var(--state-warning-bg);
+  border-color: var(--brand-warning);
+}
+.alert-danger{
+  background-color: var(--state-danger-bg);
+  border-color: var(--brand-danger);
+}

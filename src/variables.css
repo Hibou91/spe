@@ -1,0 +1,77 @@
+:root {
+  --universap-gap: 20px;
+
+  --brand-danger: #e42338;
+  --brand-warning: #f0e000;
+  --brand-moderate: #8b6bff;
+  --brand-low: #9698a4;
+  --brand-success: #51ae00;
+  --brand-info: #38aaf4;
+
+  --brand-success: #7eb64d;
+  --brand-danger: #c42033;
+  --brand-info: #2e8cca;
+   --brand-warning: #f1e869;
+
+  --color-darkest: #181a1f;
+  --color-darker: #474d5a;
+  --color-dark: #575f6e;
+  --color-disabled: #9aa1af;
+  --color-light: #bdc2cb;
+  --color-lighter: #f0f1f5;
+  --color-lightest: #ffffff;
+  --color-accent: #007b58;
+  --color-accent-light: #51a58d;
+  --color-accent-lightest: #d7ebe5;
+
+  --text-primary: #181a1f;
+  --text-secondary: #474d5a;
+  --text-tertiary: #656e81;
+  --text-white: #ffffff;
+
+  --background-primary: #ffffff;
+  --background-secondary: #f6f6f8;
+  --background-tertiary: #f0f1f5;
+
+  --border-primary: #8790a1;
+  --border-secondary: #acb2be;
+  --border-tertiary: #dadde2;
+
+  --select-primary: #007b58;
+  --select-primary-lighter: #d7ebe5;
+  --select-primary-darker: #003929;
+
+  --brand-primary: #4f52bd;
+  --brand-primary-darkest: #1d1e46;
+  --brand-primary-darker: #333579;
+  --brand-primary-lighter: #8789d2;
+  --brand-primary-lightest: #d1d2ee;
+  --brand-primary-opacity: #e3e4f2;
+
+  --brand-danger-darker: #cc293c;
+  --brand-warning-darker: #afa400;
+  --brand-moderate-darker: #6b52c4;
+  --brand-low-darker: #6e6f78;
+  --brand-success-darker: #3b7f00;
+  --brand-info-darker: #297cb2;
+
+  --sp-navbar-height: 60px;
+  --sp-navbar-divider-color: #333579;
+  --sp-navbar-inverse-bg: --navbar-inverse-bg;
+  --navbar-inverse-bg: #181826;
+  --navbar-inverse-link-color: #dadde2;
+  --navbar-inverse-link-hover-color: #ffffff;
+
+  --link-color:                            #3c59e7; 
+  --link-hover-color:                      #263994; 
+
+  --btn-success-bg:                        #3B7F00;
+  --btn-info-bg:                           #8CCEF9;
+  --btn-warning-bg:                        #F6ED6C;
+  --btn-danger-bg:                         #CC293C;
+
+  --state-success-bg:                          #D2EABC;
+  --state-info-bg:                             #CBE9FC;
+  --state-warning-bg:                          #FBF7BC;
+  --state-danger-bg:                           #FFCCD2;
+}
