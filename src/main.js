@@ -1,7 +1,8 @@
 import { app, BrowserWindow, ipcMain } from "electron";
 import path from "node:path";
 import started from "electron-squirrel-startup";
-import ThemeUtils from "./backend/ThemeUtils";
+import handleSaveTheme from "./backend/SaveTheme";
+import SaveThemeJson from "./backend/SaveThemeJson";
 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -43,7 +44,10 @@ const createWindow = () => {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
-  ipcMain.handle("save-theme", ThemeUtils.handleSaveTheme);
+  ipcMain.handle("save-theme", handleSaveTheme);
+  ipcMain.handle("save-theme-json", SaveThemeJson.saveThemeJson);
+  ipcMain.handle("open-theme-json", SaveThemeJson.importThemeJson);
+  
   createWindow();
 
   // On OS X it's common to re-create a window in the app when the

@@ -4,5 +4,7 @@
 import { contextBridge, ipcRenderer } from 'electron'
 
 contextBridge.exposeInMainWorld('electronAPI', {
-  saveTheme: (content) => ipcRenderer.invoke('save-theme', content)
+  saveTheme: (content) => ipcRenderer.invoke('save-theme', content),
+  saveThemeJson: (content) => ipcRenderer.invoke('save-theme-json', content),
+  openThemeJson: () => ipcRenderer.invoke('open-theme-json')
 })

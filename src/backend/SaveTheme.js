@@ -1,11 +1,11 @@
 import { writeFile } from "fs/promises";
 import { dialog } from "electron";
 
-export default {
-  handleSaveTheme: async function (e, content) {
+export default 
+   async function (e, content) {
   
     const { canceled, filePath } = await dialog.showSaveDialog({
-      title: "save theme",
+      title: "Export theme",
     });
     if (!canceled) {
       let fileText = `
@@ -550,5 +550,5 @@ export default {
 
       writeFile(filePath, fileText + "");
     }
-  },
+  
 };
