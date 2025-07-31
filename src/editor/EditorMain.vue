@@ -4,7 +4,7 @@
             <a @click="() => { modalOpen = !modalOpen }">
                 Select
             </a>
-            <a @click="() => { editModalOpen = !editModalOpen }">
+            <a @click="() => { openTheme() }">
                 Open
             </a>
             <a @click="() => { editModalOpen = !editModalOpen }">
@@ -113,7 +113,7 @@ const editor = ref(structuredClone(editorTemplate))
 const saveColor = (color) => {
 
 
-    var root = document.querySelector(':root');
+    const root = document.querySelector(':root');
 
     calculateOneSelectColor(color, colors)
 
@@ -147,6 +147,21 @@ const saveTheme = async () => {
     }
 
     window.electronAPI.saveThemeJson(hermes)
+
+}
+
+const openTheme = async () => {
+
+    const result = await window.electronAPI.openThemeJson()
+    if (result) {
+        const root = document.querySelector(':root');
+        for (const color in colors.value) {
+            colors.value[color].value = result[color]
+            root.style.setProperty(colors.value[color].name, colors.value[color].value);
+            editor.value[color].value = colors.value[color].value
+        }
+    }
+
 
 }
 

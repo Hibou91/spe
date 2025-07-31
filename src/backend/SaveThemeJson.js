@@ -9,16 +9,21 @@ export default {
     });
     if (!canceled) {
       writeFile(filePath, JSON.stringify(content));
+      return true
     }
+    return false
   },
   importThemeJson: async function () {
-    const { canceled, filePath } = await dialog.showSaveDialog({
+    const { canceled, filePaths } = await dialog.showOpenDialog({
       title: "Open theme",
        filters: [{name: 'json', extensions: ['json']}]
     });
+    
     if (!canceled) {
-      return readFile(filePath);
+      //console.log(await readFile(filePaths[0], "utf8"));
+      
+      return JSON.parse(await readFile(filePaths[0], "utf8"));
     }
-    return {}
+    return false
   },
 };
