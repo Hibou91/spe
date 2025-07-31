@@ -41,7 +41,7 @@
                         </div>
 
                         <div v-if="useSecondaryColor == true">
-                            <label for="">Primary: {{ selectedPrimaryColor }}</label>
+                            <label for="">Secondary: {{ selectedSecondaryColor }}</label>
                             <input class="form-control" type="color" v-model="selectedSecondaryColor" />
                         </div>
 
@@ -94,6 +94,7 @@
 <script setup>
 import { ref } from 'vue';
 import calculateOneSelectColor from './calculateOneSelectColor';
+import calculateTwoSelectColorDefault from './calculateTwoSelectColorDefault';
 
 import editorTemplate from './editorTemplate';
 
@@ -101,7 +102,7 @@ import editorTemplate from './editorTemplate';
 
 const modalOpen = ref(false)
 const editModalOpen = ref(false)
-const selectedPrimaryColor = ref('#ffffff')
+const selectedPrimaryColor = ref('#4f52bd')
 const selectedSecondaryColor = ref('#ffffff')
 const useSecondaryColor = ref(false)
 
@@ -115,7 +116,12 @@ const saveColor = (color) => {
 
     const root = document.querySelector(':root');
 
-    calculateOneSelectColor(color, colors)
+    if (useSecondaryColor.value == true) {
+        calculateTwoSelectColorDefault(selectedPrimaryColor, selectedSecondaryColor, colors)
+    } else {
+        calculateOneSelectColor(color, colors)
+    }
+
 
     for (const color in colors.value) {
         root.style.setProperty(colors.value[color].name, colors.value[color].value);

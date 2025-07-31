@@ -39,43 +39,23 @@ body{
 }
 
 .btn-danger{
-    background-color: var(--brand-danger-darker);
-    border-color: var(--brand-danger-darker);
-}
-
-.btn-danger:hover{
-    background-color: var(--brand-danger);
-    border-color: var(--brand-danger);
+    background-color: var(--btn-danger-bg);
+    border-color: var(--btn-danger-bg);
 }
 
 .btn-info{
-    background-color: var(--brand-info-darker);
-    border-color: var(--brand-info-darker);
-}
-
-.btn-info:hover{
-    background-color: var(--brand-info);
-    border-color: var(--brand-info);
+    background-color: var(--btn-info-bg);
+    border-color: var(--btn-info-bg);
 }
 
 .btn-warning{
-    background-color: var(--brand-warning-darker);
-    border-color: var(--brand-warning-darker);
-}
-
-.btn-warning:hover{
-    background-color: var(--brand-warning);
-    border-color: var(--brand-warning);
+    background-color: var(--btn-warning-bg);
+    border-color: var(--btn-warning-bg);
 }
 
 .btn-success{
-    background-color: var(--brand-success-darker);
-    border-color: var(--brand-success-darker);
-}
-
-.btn-success:hover{
-    background-color: var(--brand-success);
-    border-color: var(--brand-success);
+    background-color: var(--btn-success-bg);
+    border-color: var(--btn-success-bg);
 }
 
 .btn-link{
