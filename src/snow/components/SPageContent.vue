@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="flex-row container sp-container">
-            <div class="flex-col ">
+        <div class=" container sp-container">
+            <div class="flex-col sp-container-column">
                 <SPanel>
                     <template #header>Placeholder</template>
                     <template #main>
@@ -19,8 +19,9 @@
                                 <h1>Title 01</h1>
                                 <h2>Title 02</h2>
                                 <h3>Title 03</h3>
-                                <p class="card-text">Some <strong>quick example</strong> text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                                <p class="card-text">Some <strong>quick example</strong> text to build on the card title
+                                    and make up the bulk of
+                                    the card's content.</p>
                                 <a href="">Click me for more information</a>
                                 <hr />
                             </div>
@@ -105,7 +106,7 @@
                                 <button type="button" class="btn btn-info">Info</button>
                                 <!--<button type="button" class="btn btn-light">Light</button>
                                 <button type="button" class="btn btn-dark">Dark</button>-->
-                                
+
 
                                 <button type="button" class="btn btn-link">Link</button>
 
@@ -118,7 +119,7 @@
 
 
             </div>
-            <div class="flex-col">
+            <div class="flex-col sp-container-column">
                 <SPanel>
                     <template #header>My active items</template>
                     <template #main>
@@ -214,7 +215,29 @@ import SPanel from './SPanel.vue';
 
 <style scoped>
 .sp-container {
-    padding: var(--universap-gap) 0;
+    padding: var(--universap-gap);
+    max-width: 100vw;
+    display: flex;
+    gap: var(--universap-gap);
+    flex-direction: row;
+}
+
+.sp-container-column {
+    max-width: calc(50% - 10px);
+    min-width: 300px;
+}
+
+@media screen and (width <=900px) {
+    .sp-container {
+        padding: var(--universap-gap);
+        max-width: 100vw;
+        flex-direction: column;
+    }
+
+    .sp-container-column {
+        max-width: calc(100% - 10px);
+        min-width: 300px;
+    }
 }
 
 .activity-container {
